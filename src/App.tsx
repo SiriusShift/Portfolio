@@ -11,19 +11,21 @@ import Header from "./components/Header";
 import Info from "./components/Info";
 import Experience from "./components/Experience";
 import Techstack from "./components/Techstack";
+import Projects from "./components/Projects";
 
 function App() {
-
   return (
-    <div className="lg:w-3xl">
-    <Header />
-    <div className="grid grid-cols-3 gap-2">
-      <div className="col-span-2 space-y-2">
-      <Info />
-      <Techstack />
+    <div className="lg:w-3xl space-y-2">
+      <Header />
+      <div className="grid grid-cols-3 gap-2">
+        <div className="grid col-span-2 row-span-1 space-y-2">
+          <Info />
+          <Techstack />
+        </div>
+        <Experience />
       </div>
-      <Experience />
-    </div>
+            <Projects />
+
     </div>
   );
 }

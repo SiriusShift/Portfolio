@@ -305,7 +305,7 @@ export const InteractiveStepperRoot = React.forwardRef<
               )}
             </>
           ) : (
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               {stepperItemsContainer}
               {activeContent && <div className="flex-1">{activeContent}</div>}
             </div>
@@ -470,7 +470,7 @@ export const InteractiveStepperTitle = React.forwardRef<
 
   const titleClasses = cn(
     "text-sm font-medium leading-none text-primary text-left",
-    orientation === "horizontal" ? "ml-3" : "mt-2 ml-3",
+    orientation === "horizontal" ? "ml-3" : "mt-2 ml-5",
     // state === 'active' ? 'text-primary' : 'text-gray-500',
     className,
   );
@@ -490,7 +490,7 @@ export const InteractiveStepperDescription = React.forwardRef<
 
   const descriptionClasses = cn(
     "text-sm text-gray-500 text-left",
-    orientation === "horizontal" ? "ml-3" : "mt-1 ml-3",
+    orientation === "horizontal" ? "ml-3" : "mt-1 ml-5",
     className,
   );
 

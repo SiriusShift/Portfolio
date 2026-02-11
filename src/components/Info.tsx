@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 
 const Info = () => {
   return (
-    <Card className="text-start gap-2 p-4">
+    <Card className="text-start row-span-1  gap-2 p-4">
       <h1 className="font-bold">About</h1>
       <p className="text-sm">
         I'm a  Full-Stack Software Engineer specializing in building

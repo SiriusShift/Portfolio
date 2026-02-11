@@ -53,40 +53,31 @@ const Experience = () => {
             <InteractiveStepperIndicator type="square" />
             <div>
               <InteractiveStepperTitle>
-                Front End Developer
+                Front End Developer Intern
               </InteractiveStepperTitle>
               <InteractiveStepperDescription>
                 <p className="text-xs">Clark Outsourcing</p>
-                <p className="text-xs">Jan - April 2024</p>              </InteractiveStepperDescription>
+                <p className="text-xs">Jan - April 2024</p>{" "}
+              </InteractiveStepperDescription>
             </div>
           </InteractiveStepperTrigger>
           <InteractiveStepperSeparator />
         </InteractiveStepperItem>
-
-        <InteractiveStepperContent step={1}>
-          <Card
-            title={"Order Confirmed"}
-            description={"Order #12345 placed on Jan 15, 2024"}
-          />
-        </InteractiveStepperContent>
-
-        <InteractiveStepperContent step={2}>
-          <Card
-            title={"Processing Your Order"}
-            description={"Estimated processing time: 1-2 business days"}
-          />
-        </InteractiveStepperContent>
-
-        <InteractiveStepperContent step={3}>
-          <Card title={"Order Shipped"} description={"Tracking: #ABC123XYZ"} />
-        </InteractiveStepperContent>
-
-        <InteractiveStepperContent step={4}>
-          <Card
-            title={"Order Delivered"}
-            description={"Delivered to your location"}
-          />
-        </InteractiveStepperContent>
+        <InteractiveStepperItem>
+          <InteractiveStepperTrigger disabled>
+            <InteractiveStepperIndicator type="square" />
+            <div>
+              <InteractiveStepperTitle>
+                BS Computer Science
+              </InteractiveStepperTitle>
+              <InteractiveStepperDescription>
+                <p className="text-xs">Holy Angel University</p>
+                <p className="text-xs">2020 - 2024</p>{" "}
+              </InteractiveStepperDescription>
+            </div>
+          </InteractiveStepperTrigger>
+          <InteractiveStepperSeparator />
+        </InteractiveStepperItem>
       </InteractiveStepper>
     </Card>
   );

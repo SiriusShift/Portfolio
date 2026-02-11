@@ -10,23 +10,21 @@ const Header = () => {
       <div className="flex w-full">
         <img
           src={DefaultImage}
-          className="w-42 h-42 zoom-in-80 object-cover object-[25%_25%]"
+          className="w-36 h-36 zoom-in-80 object-cover object-[25%_25%]"
           onMouseOut={(e) => (e.currentTarget.src = DefaultImage)}
           onMouseOver={(e) => (e.currentTarget.src = HoverImage)}
         />
-        <div className="m-4 flex-1">
+        <div className="mx-4 flex-1">
           <div className="flex justify-between">
             <p className="text-2xl font-bold">Charles Amiel Marquez</p>
             <ModeToggle />
           </div>
           <div className="flex items-center gap-2">
             <MapPin size={15} />
-            <p>Pampanga, Philippines</p>
+            <p className="text-sm">Pampanga, Philippines</p>
           </div>
-          <div className="py-2 space-y-2">
-            <div className="flex">
-              <p>Fullstack React Developer / Mobile</p>
-            </div>
+          <div className="py-2 text-start space-y-2">
+              <p className="text-sm">Fullstack React Developer / Mobile</p>
             <div className="flex gap-2">
               <Button variant={"default"} className="text-sm">
                 <FileText /> Resume
