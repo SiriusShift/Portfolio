@@ -1,5 +1,5 @@
 export const Icons = {
-  react: (props) => (
+  react: (props : Object) => (
     <svg
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  html: (props) => (
+  html: (props: Object) => (
     <svg
       fill="curentColor"
       viewBox="0 0 29 29"
@@ -37,15 +37,13 @@ export const Icons = {
       </g>
     </svg>
   ),
-  css: (props) => (
+  css: (props: Object) => (
     <svg
       fill="currentColor"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 512 512"
       enable-background="new 0 0 512 512"
-      xml:space="preserve"
       {...props}
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -68,7 +66,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  sass: (props) => (
+  sass: (props: Object) => (
     <svg
       width="243px"
       height="243px"
@@ -96,7 +94,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  bootstrap: (props) => (
+  bootstrap: (props: Object) => (
     <svg
       fill="currentColor"
       viewBox="0 0 24 24"
@@ -114,7 +112,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  tailwind: (props) => (
+  tailwind: (props: Object) => (
     <svg
       viewBox="0 0 15 15"
       fill="currentColor"
@@ -140,7 +138,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  redux: (props) => (
+  redux: (props:Object) => (
     <svg
       viewBox="0 0 32 32"
       fill="currentColor"
@@ -162,7 +160,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  javascript: (props) => (
+  javascript: (props: Object) => (
     <svg
       viewBox="0 0 16 16"
       fill="currentColor"
@@ -186,7 +184,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  typescript: (props) => (
+  typescript: (props: Object) => (
     <svg
       viewBox="0 0 16 16"
       fill="currentColor"
@@ -210,7 +208,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  material: (props) => (
+  material: (props: Object) => (
     <svg
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -231,15 +229,13 @@ export const Icons = {
       </g>
     </svg>
   ),
-  node: (props) => (
+  node: (props: Object) => (
     <svg
       fill="#000000"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 512 512"
       enable-background="new 0 0 512 512"
-      xml:space="preserve"
       {...props}
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -262,7 +258,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  express: (props) => (
+  express: (props: Object) => (
     <svg
       fill="#000000"
       viewBox="0 0 24 24"
@@ -281,7 +277,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  postgresql: (props) => (
+  postgresql: (props: Object) => (
     <svg
       fill="#000000"
       viewBox="0 0 32 32"
@@ -302,12 +298,13 @@ export const Icons = {
       </g>
     </svg>
   ),
-  firebase: (props) => (
+  firebase: (props: Object) => (
     <svg
       fill="currentColor"
       viewBox="0 0 32 32"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
@@ -322,14 +319,14 @@ export const Icons = {
       </g>
     </svg>
   ),
-  prisma: (props) => (
+  prisma: (props: Object) => (
     <svg
       viewBox="-27 0 310 310"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       preserveAspectRatio="xMidYMid"
       fill="currentColor"
+      {...props}
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
@@ -352,7 +349,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  socket: (props) => (
+  socket: (props: Object) => (
     <svg
       fill="#000000"
       viewBox="0 0 32 32"
@@ -371,7 +368,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  neon: (props) => (
+  neon: (props: Object) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100"
@@ -389,7 +386,7 @@ export const Icons = {
       />
     </svg>
   ),
-  mysql: (props) => (
+  mysql: (props: Object) => (
     <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g

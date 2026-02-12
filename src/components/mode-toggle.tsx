@@ -1,20 +1,12 @@
-import { Moon, MoonIcon, Sun, SunIcon } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { useTheme } from "@/components/theme-provider";
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme, type Theme } from "@/components/theme-provider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <Tabs value={theme} onValueChange={(value) => setTheme(value)}>
+    <Tabs value={theme} onValueChange={(value: string) => setTheme(value as Theme)}>
       <TabsList>
         <TabsTrigger value="light"><SunIcon /></TabsTrigger>
         <TabsTrigger value="dark"><MoonIcon /></TabsTrigger>

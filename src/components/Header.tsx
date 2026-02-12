@@ -1,7 +1,7 @@
-import DefaultImage from "../../public/default.jpg";
-import HoverImage from "../../public/hover.jpg";
+import DefaultImage from "@/assets/default.jpg";
+import HoverImage from "@/assets/hover.jpg";
 import "../App.css";
-import { File, FileText, Mail, MapPin } from "lucide-react";
+import { FileText, Mail, MapPin } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { ModeToggle } from "../components/mode-toggle";
 const Header = () => {

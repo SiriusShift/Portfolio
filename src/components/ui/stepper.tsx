@@ -59,6 +59,7 @@ export interface IStepperTriggerProps {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 export interface IStepperTitleProps {
@@ -237,10 +238,10 @@ export const InteractiveStepperRoot = React.forwardRef<
       ],
     );
 
-    const containerClasses = cn(
-      orientation === "horizontal" ? "flex flex-col" : "flex",
-      className,
-    );
+    // const containerClasses = cn(
+    //   orientation === "horizontal" ? "flex flex-col" : "flex",
+    //   className,
+    // );
 
     React.useImperativeHandle(ref, () => ({
       ...({} as HTMLDivElement),
@@ -294,7 +295,6 @@ export const InteractiveStepperRoot = React.forwardRef<
       <InteractiveStepperContext.Provider value={contextValue}>
         <div
           ref={ref as React.Ref<HTMLDivElement>}
-          className={containerClasses}
           {...props}
         >
           {orientation === "horizontal" ? (
@@ -305,10 +305,10 @@ export const InteractiveStepperRoot = React.forwardRef<
               )}
             </>
           ) : (
-            <div className="flex gap-6">
+            <>
               {stepperItemsContainer}
               {activeContent && <div className="flex-1">{activeContent}</div>}
-            </div>
+            </>
           )}
         </div>
       </InteractiveStepperContext.Provider>
@@ -343,13 +343,13 @@ export const InteractiveStepperItem = React.forwardRef<
       [stepIndex, state, disabled],
     );
 
-    const itemClasses = cn(
-      orientation === "horizontal"
-        ? "flex items-center w-full"
-        : "flex flex-col",
-      disabled ? "opacity-50 cursor-not-allowed" : "",
-      className,
-    );
+const itemClasses = cn(
+  orientation === "horizontal"
+    ? "flex items-center w-full"
+    : "flex flex-col w-full items-start",  // ← Add w-full here
+  disabled ? "opacity-50 cursor-not-allowed" : "",
+  className,
+);
 
     return (
       <InteractiveStepperItemContext.Provider value={contextValue}>
@@ -443,7 +443,7 @@ export const InteractiveStepperTrigger = React.forwardRef<
   };
 
   const triggerClasses = cn(
-    "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+    "w-full inline-flex items-center justify-start rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
     className,
   );
 
