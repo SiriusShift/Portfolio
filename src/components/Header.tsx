@@ -14,23 +14,23 @@ const Header = () => {
           onMouseOut={(e) => (e.currentTarget.src = DefaultImage)}
           onMouseOver={(e) => (e.currentTarget.src = HoverImage)}
         />
-        <div className="mx-4 flex-1">
+        <div className="mx-2 sm:mx-4 flex-1">
           <div className="flex justify-between">
-            <p className="text-2xl font-bold">Charles Amiel Marquez</p>
-            <ModeToggle />
+            <p className="text-lg sm:text-2xl text-start font-bold">Charles Amiel Marquez</p>
+            {/* <ModeToggle /> */}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex text-start items-center gap-2">
             <MapPin size={15} />
-            <p className="text-sm">Pampanga, Philippines</p>
+            <p className="text-xs sm:text-sm truncate">Pampanga, Philippines</p>
           </div>
           <div className="py-2 text-start space-y-2">
-              <p className="text-sm">Fullstack React Developer / Mobile</p>
+              <p className="text-xs sm:text-sm">Fullstack Developer</p>
             <div className="flex gap-2">
-              <Button variant={"default"} className="text-sm">
-                <FileText /> Resume
+              <Button variant={"default"} size={"sm"} className="text-xs sm:text-sm">
+                <FileText /> <span className="hidden sm:inline">Resume</span>
               </Button>
-              <Button variant={"outline"} className="text-sm">
-                <Mail /> Send Email
+              <Button variant={"outline"} size={"sm"} className="text-xs sm:text-sm">
+                <Mail /> <span className="hidden sm:inline">Email</span>
               </Button>
             </div>
           </div>
