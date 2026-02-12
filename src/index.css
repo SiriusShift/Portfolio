@@ -15,8 +15,10 @@
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee linear infinite;
+  will-change: transform;
 }
+
 
 
 /* body {

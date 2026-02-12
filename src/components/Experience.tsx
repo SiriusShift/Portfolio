@@ -53,7 +53,7 @@ const Experience = () => {
             <InteractiveStepperIndicator type="square" />
             <div>
               <InteractiveStepperTitle>
-                Front End Developer Intern
+                Fullstack Developer Intern
               </InteractiveStepperTitle>
               <InteractiveStepperDescription>
                 <p className="text-xs">Clark Outsourcing</p>
