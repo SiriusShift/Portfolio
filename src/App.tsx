@@ -12,6 +12,7 @@ import Info from "./components/Info";
 import Experience from "./components/Experience";
 import Techstack from "./components/Techstack";
 import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
 
 function App() {
   return (
@@ -24,7 +25,11 @@ function App() {
         </div>
         <Experience />
       </div>
-            <Projects />
+      <div className="grid-cols-3 gap-2 grid">
+                    <Projects />
+                    <Certificates />
+
+      </div>
 
     </div>
   );

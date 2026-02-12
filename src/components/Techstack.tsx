@@ -2,33 +2,71 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Icons } from "./Icons";
 import { ChevronRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Frontend = [
+  // Core Fundamentals
   { name: "HTML", icon: "html" },
   { name: "CSS", icon: "css" },
-  { name: "SASS", icon: "sass" },
-  { name: "Bootstrap", icon: "bootstrap" },
-  { name: "Tailwind", icon: "tailwind" },
-  { name: "Material UI", icon: "material" },
+  { name: "JavaScript", icon: "javascript" },
+
+  // Main Frameworks
   { name: "React", icon: "react" },
   { name: "React Native", icon: "react" },
-  { name: "Redux", icon: "redux" },
-  { name: "JavaScript", icon: "javascript" },
-  { name: "TypeScript", icon: "typescript" },
-];
 
+  // Strongly Typed JS
+  { name: "TypeScript", icon: "typescript" },
+
+  // State Management
+  { name: "Redux", icon: "redux" },
+
+  // Styling Systems
+  { name: "Tailwind", icon: "tailwind" },
+  { name: "Material UI", icon: "material" },
+  { name: "Bootstrap", icon: "bootstrap" },
+  { name: "SASS", icon: "sass" },
+];
 const Backend = [
+  // Runtime & Framework
   { name: "Node.js", icon: "node" },
   { name: "Express.js", icon: "express" },
+
+  // Databases
   { name: "PostgreSQL", icon: "postgresql" },
-  { name: "Firebase", icon: "firebase" },
+  { name: "MySQL", icon: "mysql" },
+
+  // ORM
   { name: "Prisma", icon: "prisma" },
-  { name: "Neon", icon: "neon" },
+
+  // Realtime & Services
   { name: "Socket.IO", icon: "socket" },
+  { name: "Firebase", icon: "firebase" },
+
+  // Cloud Database
+  { name: "Neon", icon: "neon" },
 ];
+
+
+const speed = 20
 
 
 const Techstack = () => {
+    const frontendRef = useRef(null);
+  const backendRef = useRef(null);
+
+    useEffect(() => {
+    const setSpeed = (ref) => {
+      if (!ref.current) return;
+
+      const width = ref.current.scrollWidth / 2; // because duplicated
+      const duration = width / speed;
+
+      ref.current.style.animationDuration = `${duration}s`;
+    };
+
+    setSpeed(frontendRef);
+    setSpeed(backendRef);
+  }, []);
   return (
     <Card className="p-4 gap-2 row-span-1 text-start overflow-hidden">
       <div className="flex justify-between">
@@ -43,7 +81,7 @@ const Techstack = () => {
         {/* Viewport */}
         <div className="relative overflow-hidden">
           {/* Track */}
-          <div className="flex gap-2 w-max animate-marquee">
+          <div className="flex gap-2 w-max animate-marquee"             ref={frontendRef}>
             {[...Frontend, ...Frontend].map((tech, i) => {
               const Icon = Icons[tech.icon];
 
@@ -67,7 +105,7 @@ const Techstack = () => {
         {/* Viewport */}
         <div className="relative overflow-hidden">
           {/* Track */}
-          <div className="flex gap-2 w-max animate-marquee">
+          <div className="flex gap-2 w-max animate-marquee" ref={backendRef}>
             {[...Backend, ...Backend].map((tech, i) => {
               const Icon = Icons[tech.icon];
 
