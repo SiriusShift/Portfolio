@@ -100,7 +100,7 @@ const Projects = () => {
           View All <ChevronRight size={15} />
         </h1> */}
       </div>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {projects.map((proj) => (
           <Card className="p-3 text-start gap-1 hover:bg-secondary">
             <h1 className="text-sm font-medium">{proj.name}</h1>

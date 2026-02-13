@@ -2,15 +2,17 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme, type Theme } from "@/components/theme-provider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Button } from "./ui/button";
+import useScreenWidth from "@/hooks/useScreenWidth";
 
-export function ModeToggle() {
-  const width = screen.width;
+export function ModeToggle({className} : {className?: string}) {
+  const width = useScreenWidth();
   const { setTheme, theme } = useTheme();
 
   return width > 639 ? (
     <Tabs
       value={theme}
       onValueChange={(value: string) => setTheme(value as Theme)}
+      className={className}
     >
       <TabsList>
         <TabsTrigger value="light">
@@ -26,7 +28,7 @@ export function ModeToggle() {
       <TabsContent value="password">Change your password here.</TabsContent>
     </Tabs>
   ) : (
-    <Button variant="outline" size="icon">
+    <Button variant="outline" size="icon" className={className}>
       <Sun className="h-3 w-3 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
       <Moon className="absolute h-3 w-3 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
       <span className="sr-only">Toggle theme</span>
