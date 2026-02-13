@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Techstack from "./components/Techstack";
 import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
+import Socials from "./components/Socials";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Projects />
         <Certificates />
       </div>
+      <Socials />
     </div>
   );
 }

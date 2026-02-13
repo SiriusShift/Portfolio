@@ -35,7 +35,7 @@ const Header = () => {
             <ModeToggle className="hidden sm:inline-flex" />
           </div>
 
-          <div className="flex items-center text-start gap-2 mt-1">
+          <div className="flex items-center text-start gap-2">
             <MapPin size={15} className="shrink-0" aria-hidden="true" />
             <p className="text-xs sm:text-sm text-muted-foreground">
               Pampanga, Philippines

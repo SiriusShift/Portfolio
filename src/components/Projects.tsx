@@ -2,22 +2,6 @@ import { Card } from "./ui/card";
 
 const projects = [
   {
-    name: "DoculinkSF",
-    description:
-      "A web-based checklist and document management system for residential subdivisions.",
-    technology: "Front-end",
-    tools: ["React", "Tailwind", "ShadCN", "Redux", "Figma", "Cloudinary"],
-    features: [
-      "Subdivision Selection",
-      "Project Checklist",
-      "Document Upload",
-      "Permit Management",
-      "Progress Tracking",
-      "Secure Storage",
-    ],
-    year: "2025",
-  },
-  {
     name: "Trackwise",
     description: "A responsive personal finance tracking web application.",
     technology: "Full-stack",
@@ -41,8 +25,25 @@ const projects = [
       "Spending Limits",
       "Statistics",
     ],
+    year: "2026",
+  },
+  {
+    name: "DoculinkSF",
+    description:
+      "A web-based checklist and document management system for residential subdivisions.",
+    technology: "Front-end",
+    tools: ["React", "Tailwind", "ShadCN", "Redux", "Figma", "Cloudinary"],
+    features: [
+      "Subdivision Selection",
+      "Project Checklist",
+      "Document Upload",
+      "Permit Management",
+      "Progress Tracking",
+      "Secure Storage",
+    ],
     year: "2025",
   },
+
   {
     name: "PathAlert",
     description:
@@ -87,7 +88,7 @@ const projects = [
       "Inventory Tracking",
       "Reports",
     ],
-    year: "2025",
+    year: "2024",
   },
 ];
 

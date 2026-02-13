@@ -23,7 +23,7 @@ const Experience = () => {
               </InteractiveStepperTitle>
               <InteractiveStepperDescription className="flex flex-row sm:flex-col justify-between">
                 <p className="text-xs"> RDF Feed, Livestock & Foods Inc.</p>
-                <p className="text-xs">Aug 2024 - Current</p>
+                <p className="text-xs">Current</p>
               </InteractiveStepperDescription>
             </div>
           </InteractiveStepperTrigger>
@@ -39,7 +39,7 @@ const Experience = () => {
               </InteractiveStepperTitle>
               <InteractiveStepperDescription className="flex flex-row sm:flex-col justify-between">
                 <p className="text-xs">Freelancing</p>
-                <p className="text-xs">May - July 2024</p>
+                <p className="text-xs">2024</p>
               </InteractiveStepperDescription>
             </div>
           </InteractiveStepperTrigger>
@@ -55,7 +55,7 @@ const Experience = () => {
               </InteractiveStepperTitle>
               <InteractiveStepperDescription className="flex flex-row sm:flex-col justify-between">
                 <p className="text-xs">Clark Outsourcing</p>
-                <p className="text-xs">Jan - April 2024</p>{" "}
+                <p className="text-xs">2024</p>{" "}
               </InteractiveStepperDescription>
             </div>
           </InteractiveStepperTrigger>
@@ -70,7 +70,7 @@ const Experience = () => {
               </InteractiveStepperTitle>
               <InteractiveStepperDescription className="flex flex-row sm:flex-col justify-between">
                 <p className="text-xs">Holy Angel University</p>
-                <p className="text-xs">2020 - 2024</p>{" "}
+                <p className="text-xs">2024</p>{" "}
               </InteractiveStepperDescription>
             </div>
           </InteractiveStepperTrigger>
